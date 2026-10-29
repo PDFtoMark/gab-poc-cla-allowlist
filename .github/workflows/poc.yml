@@ -26,7 +26,8 @@ jobs:
           fi
       - name: Label PR as CLA Unsigned (original condition)
         if: ${{ steps.check_allowlist.outputs.is_allowed == 'false' }}
-        run: echo "would label cla: unsigned"
+        run: |
+          echo "would label cla unsigned"
       - name: Label PR as CLA Allowlist (original condition)
         if: ${{ steps.check_allowlist.outputs.is_allowed == 'true' }}
         run: |
