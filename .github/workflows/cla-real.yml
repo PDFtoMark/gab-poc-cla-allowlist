@@ -6,6 +6,11 @@ on:
   pull_request_target:
     types: [opened, closed, synchronize]
 
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
 jobs:
   cla:
     runs-on: ubuntu-latest
